@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MONGODB PAGE</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body bgcolor="#DC644A">
+<h1 align="center">Exercise N1</h1>
+<h2 align="center">Results from the Database</h2>
+<div class="container">
+    <h3 align="center">Standings</h3>
+    <table style="width:100%" border="10px" >
+        <tr bgcolor="#E88566">
+            <th>team</th>
+            <th>matchesplayed</th>
+            <th>points</th>
+            <th>goals</th>
+        </tr>
+        <% results.forEach(function(r) { %>
+            <tr bgcolor="#ffc0cb">
+                <td align="center"><%= r.team%></td>
+                <td align="center"><%= r.matchesplayed%></td>
+                <td align="center"><%= r.points%></td>
+                <td align="center"><%= r.goals%></td>
+            </tr>
+        <% }); %>
+    </table>
+</div>
+</body>
+</html>
